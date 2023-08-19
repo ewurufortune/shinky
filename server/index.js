@@ -2,11 +2,11 @@ require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
+app.use(cors({origin:true,credentials: true}));
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.options('*', cors())
 
 const paypal = require('@paypal/checkout-server-sdk');
 const clientId = process.env.PAYPAL_CLIENT_ID;
