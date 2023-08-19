@@ -6,7 +6,7 @@ export default function CheckoutButton({ url, trackName }) {
   const isReturnHandled = useRef(false); 
   const createPayPalTransaction = async () => {
     try {
-      const response = await fetch("http://localhost:8000/create-paypal-transaction", {
+      const response = await fetch("https://www.sandbox.paypal.com/create-paypal-transaction", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export default function CheckoutButton({ url, trackName }) {
       if (token && payerId) {
         try {
           const response = await fetch(
-            `http://localhost:8000/process-paypal-payment?token=${token}&payerId=${payerId}`
+            `https://shinky-k7qp.onrender.com/process-paypal-payment?token=${token}&payerId=${payerId}`
           );
           const result = await response.text();
 
