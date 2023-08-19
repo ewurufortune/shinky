@@ -55,7 +55,6 @@ app.get('/process-paypal-payment', async (req, res) => {
   request.requestBody({
     payer_id: payerId,
   });
-
   try {
     const response = await client.execute(request);
     // Payment is successfully processed on PayPal's end
