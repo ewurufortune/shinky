@@ -58,6 +58,6 @@ out/
 build/
 public/
 
-# Ignore .env files committed to the repository; this is to avoid
+# Ignore .env  okay files committed to the repository; this is to avoid
 # accidental sharing of sensitive information.
 .env*
