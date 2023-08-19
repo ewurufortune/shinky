@@ -1,0 +1,63 @@
+# Node.js specific
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Compiled output
+dist/
+build/
+out/
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# Testing
+/coverage/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.iml
+
+# Logs and data
+logs/
+*.log
+*.log.*
+*.access
+*.access.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Package manager files
+package-lock.json
+yarn.lock
+
+# Miscellaneous
+*.tmp
+*.swp
+*.bak
+*.cache
+*.log*
+*.pid
+*.seed
+*.pid.lock
+
+# Build and output directories
+dist/
+out/
+build/
+public/
+
+# Ignore .env files committed to the repository; this is to avoid
+# accidental sharing of sensitive information.
+.env*
