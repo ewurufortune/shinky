@@ -1,7 +1,7 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Button from "@mui/material/Button";
-import CameraIcon from "@mui/icons-material/PhotoCamera";
+import RepeatOneOnIcon from "@mui/icons-material/RepeatOneOn";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -21,7 +21,7 @@ import ShareButtons from "../common/ShareButton";
 import Chip from "@mui/material/Chip";
 import { RWebShare } from "react-web-share";
 import SendIcon from "@mui/icons-material/Send";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 import Flash from "react-reveal/Flash";
 import { useState } from "react";
 
@@ -90,15 +90,30 @@ export default function LayoutBody() {
           sx={{
             display: "flex",
             alignItems: "center",
-            backgroundImage: `url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png')`,
+            backgroundColor: "#A8DF8E",
+             backgroundImage: `url("https://www.transparenttextures.com/patterns/dark-circles.png")')`,
             backgroundSize: "auto 100px",
             paddingTop: "10px", // Add some padding to separate the background from content
           }}
         >
-          <CameraIcon sx={{ mr: 2 }} />
-          <Typography variant="h6" color="inherit" noWrap>
-            Album layout
-          </Typography>
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} />
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />{" "}
+          <RepeatOneOnIcon sx={{ mr: 2, opacity: 0.1}} /> <RepeatOneOnIcon sx={{ mr: 2 , opacity: 0.1}} />
+          <Typography variant="h6" color="inherit" noWrap></Typography>
         </Toolbar>
       </AppBar>
       <div
@@ -112,11 +127,12 @@ export default function LayoutBody() {
           sx={{
             display: "flex",
             alignItems: "center", // Vertically center the content
-            backgroundImage: `url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png')`,
-            backgroundSize: "auto 50px", // Adjust the second value (50px) to control pattern repetition
+            backgroundColor: "#A8DF8E",
+            backgroundImage: `url("https://www.transparenttextures.com/patterns/dark-circles.png")`,
+            backgroundSize: "auto 10px", // Adjust the second value (50px) to control pattern repetition
             pt: 8,
             pb: 6,
-            border: "10px solid #ccc", // Add a border with a color of your choice
+            border: "10px solid #A4907C", // Add a border with a color of your choice
           }}
         >
           <Container maxWidth="sm">
@@ -124,34 +140,84 @@ export default function LayoutBody() {
               <Box
                 sx={{
                   flex: 1,
-                  borderBottom: "2px solid pink", // Pink bottom border
+                  borderBottom: "2px solid #e74c3c", // Pink bottom border
                   paddingBottom: 2,
                 }}
               >
                 {/* Header Text */}
                 <Flash when={isHovered}>
+                <Zoom>
                   <Box
                     component="div"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     sx={{
-                      backgroundImage:
-                        "url('https://fontmeme.com/permalink/230814/9cf1198a733a6e3070fd76307197b297.png')",
-                      backgroundSize: "contain", // Change to 'cover' if necessary
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center", // Center the image
                       width: "100%",
-                      height: "100px", // Adjust the height as needed
-                      color: "transparent", // Make the text transparent
+                      height: "100px",
                       display: "flex",
-                      marginBottom: "30px",
+                      flexDirection: "column",
                       alignItems: "center",
                       justifyContent: "center",
-                      cursor: "pointer", // Add the cursor style to indicate interactivity
+                      cursor: "pointer",
+                      position: "relative",
                     }}
                   >
-                    The Shinky Album
+                    <Typography
+                      variant="h1"
+                      align="center"
+                      color="text.secondary"
+                      paragraph
+                      sx={{
+                        fontFamily: "'Kalam', sans-serif",
+                        fontWeight: 700,
+                      }}
+                    >
+                      <span style={{ color: "#3498db" }}>S</span>
+                      <span
+                        style={{
+                          color: "#2ecc71",
+                          textShadow: "2px 2px 4px rgba(0,0,0,0.4)",
+                        }}
+                      >
+                        H
+                      </span>
+                      <span style={{ color: "#d35400" }}>I</span>
+                      <span style={{ color: "#e74c3c" }}>N</span>
+                      <span style={{ color: "#c0392b" }}>K</span>
+                      <span style={{ color: "#3498db" }}>Y</span>
+                    </Typography>
+                    <span
+                      style={{
+                        width: "50%",
+                        height: "2px",
+                        backgroundColor: "#3498db",
+                        position: "absolute",
+                        bottom: "-5px",
+                        left: "25%",
+                      }}
+                    ></span>
+                    <span
+                      style={{
+                        width: "40%",
+                        height: "2px",
+                        backgroundColor: "#3498db",
+                        position: "absolute",
+                        bottom: "-10px",
+                        left: "30%",
+                      }}
+                    ></span>
+                    <span
+                      style={{
+                        width: "30%",
+                        height: "2px",
+                        backgroundColor: "#3498db",
+                        position: "absolute",
+                        bottom: "-15px",
+                        left: "35%",
+                      }}
+                    ></span>
                   </Box>
+                  </Zoom>
                 </Flash>
                 <Typography
                   variant="h5"
@@ -159,14 +225,29 @@ export default function LayoutBody() {
                   color="text.secondary"
                   paragraph
                   sx={{
-                    position: "relative", // Needed for the text-shadow
+                    fontFamily: "'Abril Fatface', sans-serif",
+                    fontWeight: 400,
+                    position: "relative",
+                    marginTop: "15%", // Adjust the margin top value
+                    marginBottom: "19%",
+                    animation: "glow 5s infinite", // Add the animation property
+                    "@keyframes glow": {
+                      "0%": {
+                        textShadow: "none", // No text shadow at the beginning of the animation
+                      },
+                      "50%": {
+                        textShadow: "5px 5px 15px #ad1a08", // Glowing effect at the midpoint
+                      },
+                      "100%": {
+                        textShadow: "none", // No text shadow at the end of the animation
+                      },
+                    },
                   }}
                 >
                   Introducing{" "}
                   <span
                     sx={{
-                      textShadow: "5px 5px 25px #ad1a08", // Apply the specified text-shadow
-                      color: "#f9ccc9", // Apply the specified color
+                      color: "#f9ccc9",
                     }}
                   >
                     "The Shinky Album,"
@@ -174,11 +255,9 @@ export default function LayoutBody() {
                   a transcendent journey through the myriad shades of love,
                   carefully crafted by yours truly. This album is a symphony of
                   emotions, woven together with melodies that mirror the
-                  intricate dance of hearts entwined. From the euphoric
-                  crescendos of newfound passion to the tender cadences of
-                  enduring companionship, each track tells a story of love's
-                  transformative power.
+                  intricate dance of hearts entwined.
                 </Typography>
+
                 <Stack direction="row" spacing={2} justifyContent="flex-start">
                   <Button variant="contained">Download The Album</Button>
                   <RWebShare
@@ -203,7 +282,9 @@ export default function LayoutBody() {
         <Container
           sx={{
             py: 8,
-            backgroundImage: `url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png')`,
+            background: "#A8DF8E",
+            backgroundImage: `url("https://www.transparenttextures.com/patterns/elegant-grid.png")`,
+
             backgroundSize: "auto 70px",
           }}
           maxWidth="100%"
@@ -211,9 +292,10 @@ export default function LayoutBody() {
           <Container
             sx={{
               py: 8,
-              backgroundImage: `url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png')`,
+              backgroundColor: "#a8df8e",
+              backgroundImage: `url("https://www.transparenttextures.com/patterns/elegant-grid.png")`,
               backgroundSize: "auto 70px",
-              borderBottom: "2px solid pink", // Pink bottom border
+              borderBottom: "2px solid #e74c3c", // Pink bottom border
               paddingBottom: 2,
             }}
             maxWidth="md"
@@ -227,6 +309,12 @@ export default function LayoutBody() {
                       sx={{
                         height: "100%",
                         display: "flex",
+                        backgroundColor: "#A4907C",
+                        backgroundImage:
+                          " url('https://www.transparenttextures.com/patterns/elegant-grid.png'), linear-gradient(to bottom, #A8DF8E, #D0F5BE, #FBFFDC)",
+                        backgroundSize: "auto 70px",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center top",
                         flexDirection: "column",
                         transition: "transform 0.2s", // Adding transition for a smoother effect
                         "&:hover": {
@@ -241,8 +329,15 @@ export default function LayoutBody() {
                         }}
                         image="https://images.unsplash.com/photo-1691860664006-b1ef531c8743?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
                       />
-                      <CardContent sx={{ flexGrow: 1 }}>
-                        <Typography gutterBottom variant="h5" component="h2">
+                      <CardContent sx={{ flexGrow: 1, color: "#FBFFDC" }}>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="h2"
+                          sx={{
+                            fontFamily: "'Fjalla One', cursive",
+                          }}
+                        >
                           {card.name}
                         </Typography>
                         <Typography>
@@ -251,7 +346,11 @@ export default function LayoutBody() {
                         </Typography>
                       </CardContent>
                       <CardActions sx={{ justifyContent: "center" }}>
-                      <DownloadAudioButton id={card.id} url={card.url} trackName={card.name} />
+                        <DownloadAudioButton
+                          id={card.id}
+                          url={card.url}
+                          trackName={card.name}
+                        />
                       </CardActions>
                     </Card>
                   </Fade>
@@ -262,28 +361,26 @@ export default function LayoutBody() {
         </Container>
       </div>
       <div sx={{ maxWidth: "130px" }}>
-        <Divider sx={{ maxWidth: "50%", marginLeft: "25%" }}>
-          <Chip
-            sx={{
-              backgroundImage:
-                "linear-gradient(45deg, #FF69B4, #FFA500,#FF69B4,#FF69B4)",
-            }}
-            label="JOIN THE MOVEMENT"
-          />
-        </Divider>
+        <Divider sx={{ maxWidth: "20%", marginLeft: "25%" }}></Divider>
       </div>
 
       {/* Footer */}
       <Box
         sx={{
           p: 6,
-          backgroundImage: `url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png')`,
-          backgroundSize: "auto 50px",
+          backgroundColor: "#A8DF8E",
+          backgroundImage: `url("https://www.transparenttextures.com/patterns/dark-circles.png")`,
+          backgroundSize: "auto 20px",
         }}
         component="footer"
       >
-        <Typography variant="h6" align="center" gutterBottom>
-          Shinky
+        <Typography
+          variant="h6"
+          align="center"
+          sx={{ fontFamily: "'Kalam', sans-serif" }}
+          gutterBottom
+        >
+          ShinkyAfrika
         </Typography>
         <ShareButtons />
         <Typography

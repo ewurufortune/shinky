@@ -1,12 +1,13 @@
 import React from "react";
 import { useEffect,useState, useRef } from "react";
-import { Button } from "@mui/material";
-
+import { Button, CircularProgress } from "@mui/material";
 export default function CheckoutButton({ url, trackName }) {
+  const [isLoading, setIsLoading] = useState(false);
   const isReturnHandled = useRef(false); 
   const createPayPalTransaction = async () => {
+    setIsLoading(true);
     try {
-      const response = await fetch("https://www.sandbox.paypal.com/create-paypal-transaction", {
+      const response = await fetch("https://shinky-k7qp.onrender.com/create-paypal-transaction", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,6 +29,7 @@ export default function CheckoutButton({ url, trackName }) {
     } catch (error) {
       console.error("Error creating PayPal transaction:", error);
     }
+    setIsLoading(false)
   };
 
   const downloadFileAtURL = (url) => {
@@ -75,7 +77,15 @@ export default function CheckoutButton({ url, trackName }) {
     handleReturnFromPayPal();
   }, []);
   return (
-    <Button onClick={createPayPalTransaction} sx={{ whiteSpace: 'nowrap' }}>
-      Download '{trackName}'
-    </Button>  );
+    <Button
+    onClick={createPayPalTransaction}
+    sx={{ whiteSpace: "nowrap" }}
+    disabled={isLoading} // Disable the button while loading
+  >
+    {isLoading ? (
+      `Processing `,<CircularProgress size={24}/> // Display loading indicator
+    ) : (
+      `Download '${trackName}'`
+    )}
+  </Button> );
 }
