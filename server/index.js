@@ -16,8 +16,8 @@ const environment = new paypal.core.SandboxEnvironment(clientId, clientSecret);
 const client = new paypal.core.PayPalHttpClient(environment);
 
 const storeItems = new Map([
-  [1, { priceInCents: 10000, name: 'Learn React Course' }],
-  [2, { priceInCents: 15000, name: 'Learn CSS Course' }],
+  [1, { priceInCents: 1000, name: 'Music Title' }],
+  [2, { priceInCents: 1000, name: 'Music Title' }],
 ]);
 
 app.post('/create-paypal-transaction', async (req, res) => {
@@ -35,8 +35,8 @@ app.post('/create-paypal-transaction', async (req, res) => {
       },
     ],
     application_context: {
-        return_url: 'http://localhost:3000/return', // Replace with your actual return URL
-        cancel_url: 'http://localhost:3000/cancel', // Replace with your actual cancel URL
+        return_url: 'https://shinky.netlify.app/return', // Replace with your actual return URL
+        cancel_url: 'https://shinky.netlify.app/cancel', // Replace with your actual cancel URL
       },
   });
 

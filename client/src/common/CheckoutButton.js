@@ -14,8 +14,8 @@ export default function CheckoutButton({ url, trackName }) {
         },
         body: JSON.stringify({
           items: [
-            { id: 1, quantity: 3 },
-            { id: 2, quantity: 2 },
+            { id: 1, quantity: 1 },
+            // { id: 2, quantity: 1 },
           ],
         }),
       });
@@ -77,7 +77,7 @@ export default function CheckoutButton({ url, trackName }) {
     handleReturnFromPayPal();
   }, []);
   return (
-    <Button
+    <Button type="primary"
     onClick={createPayPalTransaction}
     sx={{ whiteSpace: "nowrap" }}
     disabled={isLoading} // Disable the button while loading

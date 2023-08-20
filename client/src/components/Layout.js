@@ -24,6 +24,7 @@ import SendIcon from "@mui/icons-material/Send";
 import { Fade, Zoom } from "react-awesome-reveal";
 import Flash from "react-reveal/Flash";
 import { useState } from "react";
+import { FadeIn } from 'react-slide-fade-in';
 
 function Copyright() {
   return (
@@ -38,23 +39,23 @@ function Copyright() {
   );
 }
 const TRACK1_FILE_URL =
-  "https://shinky-music-git-main-ewurufortune.vercel.app/music.mp3";
+  "https://shinky.netlify.app/music.mp3";
 const TRACK2_FILE_URL =
-  "https://shinky-music-git-main-ewurufortune.vercel.app/music.mp3";
+  "https://shinky.netlify.app/music.mp3";
 const TRACK3_FILE_URL =
-  "https://shinky-music-git-main-ewurufortune.vercel.app/music.mp3";
+  "https://shinky.netlify.app/music.mp3";
 const TRACK4_FILE_URL =
-  "https://shinky-music-git-main-ewurufortune.vercel.app/music.mp3";
+  "https://shinky.netlify.app/music.mp3";
 const TRACK5_FILE_URL =
-  "https://shinky-music-git-main-ewurufortune.vercel.app/music.mp3";
+  "https://shinky.netlify.app/music.mp3";
 const TRACK6_FILE_URL =
-  "https://shinky-music-git-main-ewurufortune.vercel.app/music.mp3";
+  "https://shinky.netlify.app/music.mp3";
 const TRACK7_FILE_URL =
-  "https://shinky-music-git-main-ewurufortune.vercel.app/music.mp3";
+  "https://shinky.netlify.app/music.mp3";
 const TRACK8_FILE_URL =
-  "https://shinky-music-git-main-ewurufortune.vercel.app/music.mp3";
+  "https://shinky.netlify.app/music.mp3";
 const TRACK9_FILE_URL =
-  "https://shinky-music-git-main-ewurufortune.vercel.app/music.mp3";
+  "https://shinky.netlify.app/music.mp3";
 
 const cards = [
   { id: 1, name: "Tender", url: TRACK1_FILE_URL },
@@ -219,6 +220,11 @@ export default function LayoutBody() {
                   </Box>
                   </Zoom>
                 </Flash>
+                <FadeIn
+                from="bottom"
+      positionOffset={100}
+      triggerOffset={50}
+      delayInMilliseconds={200}>
                 <Typography
                   variant="h5"
                   align="left"
@@ -228,6 +234,7 @@ export default function LayoutBody() {
                     fontFamily: "'Abril Fatface', sans-serif",
                     fontWeight: 400,
                     position: "relative",
+                    // color:'#ad1a08',
                     marginTop: "15%", // Adjust the margin top value
                     marginBottom: "19%",
                     animation: "glow 5s infinite", // Add the animation property
@@ -236,7 +243,7 @@ export default function LayoutBody() {
                         textShadow: "none", // No text shadow at the beginning of the animation
                       },
                       "50%": {
-                        textShadow: "5px 5px 15px #ad1a08", // Glowing effect at the midpoint
+                        textShadow: "5px 5px 15px #FFC436", // Glowing effect at the midpoint
                       },
                       "100%": {
                         textShadow: "none", // No text shadow at the end of the animation
@@ -257,22 +264,34 @@ export default function LayoutBody() {
                   emotions, woven together with melodies that mirror the
                   intricate dance of hearts entwined.
                 </Typography>
-
+</FadeIn>
                 <Stack direction="row" spacing={2} justifyContent="flex-start">
+                <FadeIn
+                from="left"
+      positionOffset={300}
+      triggerOffset={50}
+      delayInMilliseconds={200}>
                   <Button variant="contained">Download The Album</Button>
+                  </FadeIn>
                   <RWebShare
                     data={{
                       text: " This album is a symphony of emotions, woven together with melodies that mirror the intricate dance of hearts entwined.",
-                      url: "https://shinky-music-git-main-ewurufortune.vercel.app/",
+                      url: "https://shinky.netlify.app/",
                       title: "The Shinky Album",
                     }}
                     onClick={() => console.log("shared successfully!")}
                   >
+                       <FadeIn
+                from="right"
+      positionOffset={300}
+      triggerOffset={50}
+      delayInMilliseconds={200}>
                     <Button variant="outlined">
                       {" "}
                       <SendIcon />
                       Share This Album
                     </Button>
+</FadeIn>
                   </RWebShare>
                 </Stack>
               </Box>
@@ -325,7 +344,7 @@ export default function LayoutBody() {
                       <CardMedia
                         component="div"
                         sx={{
-                          pt: "56.25%", // 16:9 aspect ratio
+                          pt: "100.25%", // 16:9 aspect ratio
                         }}
                         image="https://images.unsplash.com/photo-1691860664006-b1ef531c8743?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
                       />
@@ -348,7 +367,7 @@ export default function LayoutBody() {
                       <CardActions sx={{ justifyContent: "center" }}>
                         <DownloadAudioButton
                           id={card.id}
-                          url={card.url}
+                          url={card.url}od
                           trackName={card.name}
                         />
                       </CardActions>
