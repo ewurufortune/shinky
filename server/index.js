@@ -35,8 +35,8 @@ app.post('/create-paypal-transaction', async (req, res) => {
       },
     ],
     application_context: {
-        return_url: 'https://shinky.netlify.app/return', // Replace with your actual return URL
-        cancel_url: 'https://shinky.netlify.app/cancel', // Replace with your actual cancel URL
+        return_url: 'https://shinky.netlify.app', // Replace with your actual return URL
+        cancel_url: 'https://shinky.netlify.app', // Replace with your actual cancel URL
       },
   });
 
