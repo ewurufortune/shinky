@@ -22,7 +22,7 @@ export default function CheckoutButton({ url, trackName }) {
 
       const data = await response.json();
       if (data.orderId) {
-        window.location.href = `https://api-m.paypal.com/checkoutnow?token=${data.orderId}`;
+        window.location.href = `https://www.paypal.com/checkoutnow?token=${data.orderId}`;
       } else {
         console.error("Failed to create PayPal transaction");
       }
